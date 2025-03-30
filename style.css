@@ -96,6 +96,10 @@ body {
   color: #e5e7eb;
 }
 
+.info {
+  height: 400px;
+}
+
 .info h2 {
   margin: 48px 0;
   font-size: 36px;
@@ -125,4 +129,31 @@ body {
 .info p {
   color: #777;
   text-align: center;
+}
+
+.quote {
+  background-color: #e5e7eb;
+}
+
+.quote .inner {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 360px; 
+}
+
+.quote p {
+  font-size: 36px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.quote .name {
+  align-self: end;
+  margin-right: 40px;
+  font-size: 20px;
+  font-weight: 700;
 }
