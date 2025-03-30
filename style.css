@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 80px;
 }
 
 .header .logo {
@@ -94,6 +94,7 @@ body {
   height: 200px;
   background-color: gray;
   color: #e5e7eb;
+  font-size: 18px;
 }
 
 .info {
@@ -163,7 +164,7 @@ body {
   align-items: center;
   max-width: 960px;
   margin: 0 auto;
-  height: 300px;
+  height: 320px;
 }
 
 .sign-up .inner {
@@ -178,11 +179,13 @@ body {
 
 .sign-up h3 {
   color: #f9faf8;
+  font-size: 20px;
   margin-bottom: 4px;
 }
 
 .sign-up p {
   color: #e5e7eb;
+  font-size: 18px;
 }
 
 .sign-up button {
@@ -193,4 +196,19 @@ body {
   padding: 8px 32px;
   font-size: 16px;
   font-weight: 700;
+}
+
+.footer {
+  background-color: #1f2937;
+  height: 80px;
+}
+
+.footer .inner {
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f9faf8;
 }
