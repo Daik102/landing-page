@@ -97,6 +97,10 @@ body {
   font-size: 18px;
 }
 
+.hero img {
+  width: 100%;
+}
+
 .info {
   height: 400px;
 }
