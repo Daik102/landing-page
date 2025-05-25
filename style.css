@@ -1,9 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: Play-Bold;
+  src: url(./font/Play-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./font/Roboto-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+:root {
+  --main-theme: rgb(31, 41, 55);
+  --sub-theme: rgb(23, 104, 224);
+  --white-theme: #f7f7ff;
+  --light-blue-theme: rgb(177, 210, 255);
+  --paragraph-theme: #777;
+  --hover-theme: rgb(133, 182, 255);
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 10px;
+  font-family: Play-bold, Roboto, Arial, sans-serif;
 }
 
 ul {
@@ -14,51 +33,49 @@ a {
   text-decoration: none;
 }
 
-body {
-  font-family: Roboto, Arial, sans-serif;
-}
-
 .header {
-  background-color: #1f2937;
+  background-color: var(--main-theme);
+  border-bottom: 0.6rem dashed var(--light-blue-theme);
 }
 
 .header .inner {
-  max-width: 960px;
+  max-width: 96rem;
+  height: 8rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
 }
 
-.header .logo {
-  font-size: 24px;
-  color: #f9faf8;
-  font-weight: 700;
+.logo img {
+  width: 4.8rem;
+  height: auto;
+  filter: invert(100%) sepia(39%) saturate(79%) hue-rotate(95deg) brightness(114%) contrast(95%);
 }
 
 .header ul {
   display: flex;
-  gap: 24px;
+  gap: 2.8rem;
 }
 
-.header a {
-  font-size: 18px;
-  color: #e5e7eb;
+.header ul img {
+  width: 3.6rem;
+  height: auto;
+  filter: invert(100%) sepia(39%) saturate(79%) hue-rotate(95deg) brightness(114%) contrast(95%);
 }
 
 .hero {
-  background-color: #1f2937;
+  background-color: var(--main-theme);
 }
 
 .hero .inner {
-  max-width: 960px;
+  max-width: 96rem;
   margin: 0 auto;
   display: flex;
-  gap: 48px;
+  gap: 4.8rem;
   justify-content: space-between;
   align-items: center;
-  height: 440px;
+  height: 44rem;
 }
 
 .hero .description {
@@ -66,153 +83,192 @@ body {
 }
 
 .hero h1 {
-  font-size: 48px;
-  color: #f9faf8;
+  font-size: 4.8rem;
+  line-height: 1;
+  color: var(--white-theme);
+}
+
+.hero .description img {
+  translate: 1.2rem 0.4rem;
+  width: 4rem;
+  height: 4rem;
+  filter: invert(100%) sepia(39%) saturate(79%) hue-rotate(95deg) brightness(114%) contrast(95%);
 }
 
 .hero p {
-  font-size: 18px;
-  color: #e5e7eb;
-  margin-bottom: 16px;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: var(--white-theme);
+  margin: 2rem 0 3.6rem;
 }
 
 .hero button {
-  background-color: #3883f6;
-  color: #f9faf8;
+  background-color: var(--sub-theme);
+  color: var(--white-theme);
   border: none;
-  border-radius: 8px;
-  padding: 8px 32px;
-  font-size: 18px;
-  font-weight: 700;
+  border-radius: 0.8rem;
+  padding: 1.2rem 2.8rem;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: var(--hover-theme);
 }
 
 .hero .img-container {
-  flex: 1;
+  max-width: 48rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  background-color: gray;
-  color: #e5e7eb;
-  font-size: 18px;
 }
 
-.hero img {
+.hero .img-container img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .info {
-  height: 400px;
+  padding-top: 5.6rem;
+  height: 48rem;
+  background-color: var(--light-blue-theme);
+  border-bottom: 0.6rem dashed var(--main-theme);
 }
 
 .info h2 {
-  margin: 48px 0;
-  font-size: 36px;
+  margin-bottom: 4rem;
+  font-size: 3.6rem;
   font-weight: 900;
-  color: #1f2937;
+  color: var(--main-theme);
   text-align: center;
 }
 
 .info ul {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 4.8rem;
 }
 
 .info li {
-  max-width: 156px;
+  width: 16rem;
+  height: 16rem;
 }
 
-.info .box {
-  margin-bottom: 12px;
+.info div {
+  margin-bottom: 1.6rem;
   width: 100%;
-  height: 156px;
-  border: 4px solid #3883f6;
-  border-radius: 12px;
+  height: 100%;
+  border: 0.4rem solid var(--white-theme);
+  border-radius: 1.2rem;
+}
+
+.info div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+.info div img:hover {
+  opacity: 0.65;
 }
 
 .info p {
-  color: #777;
+  color: var(--paragraph-theme);
   text-align: center;
+  font-size: 1.8rem;
+  font-family: Roboto, Arial, sans-serif;;
 }
 
 .quote {
-  background-color: #e5e7eb;
+  background-color: #d1d1d7;
+  box-shadow: inset 0 -2rem 2rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .quote .inner {
-  max-width: 780px;
+  max-width: 78rem;
+  height: 40rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 360px; 
 }
 
 .quote p {
-  font-size: 36px;
+  font-size: 3.6rem;
   font-weight: 200;
   font-style: italic;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 .quote .name {
   align-self: end;
-  margin-right: 40px;
-  font-size: 20px;
+  margin-right: 2rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .sign-up {
+  background-color: var(--main-theme);
+  border-bottom: 0.6rem dashed var(--light-blue-theme);
   display: flex;
   align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
-  height: 320px;
+  height: 40rem;
 }
 
 .sign-up .inner {
-  width: 100%;
-  background-color: #3883f6;
-  border-radius: 8px;
-  height: 140px;
+  width: 96rem;
+  height: 20rem;
+  margin: 0 auto;
+  background-image: linear-gradient(var(--light-blue-theme), var(--sub-theme));
+  border-radius: 1.2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .sign-up h3 {
-  color: #f9faf8;
-  font-size: 20px;
-  margin-bottom: 4px;
+  color: var(--white-theme);
+  font-size: 3.2rem;
+  margin-bottom: 0.8rem;
 }
 
 .sign-up p {
-  color: #e5e7eb;
-  font-size: 18px;
+  color: var(--white-theme);
+  font-size: 2rem;
 }
 
 .sign-up button {
-  background-color: #3883f6;
-  color: #f9faf8;
-  border: 2px solid #f9faf8;
-  border-radius: 8px;
-  padding: 8px 32px;
-  font-size: 16px;
-  font-weight: 700;
+  background-color: var(--sub-theme);
+  color: var(--white-theme);
+  border: 0.2rem solid var(--white-theme);
+  border-radius: 0.8rem;
+  padding: 1.2rem 2.8rem;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sign-up button:hover {
+  background-color: var(--hover-theme);
 }
 
 .footer {
-  background-color: #1f2937;
-  height: 80px;
+  background-color: var(--main-theme);
+  height: 8rem;
 }
 
 .footer .inner {
-  max-width: 960px;
+  max-width: 96rem;
   height: 100%;
   margin: 0 auto;
+  font-size: 1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f9faf8;
+  color: var(--white-theme);
 }
