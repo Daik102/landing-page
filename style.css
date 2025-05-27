@@ -196,7 +196,7 @@ a {
 
 .quote .inner {
   max-width: 78rem;
-  height: 40rem;
+  height: 44rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -223,12 +223,12 @@ a {
   border-bottom: 0.6rem dashed var(--light-blue-theme);
   display: flex;
   align-items: center;
-  height: 40rem;
+  height: 48rem;
 }
 
 .sign-up .inner {
   width: 96rem;
-  height: 20rem;
+  height: 24rem;
   margin: 0 auto;
   background-image: linear-gradient(var(--light-blue-theme), var(--sub-theme));
   border-radius: 1.2rem;
