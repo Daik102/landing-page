@@ -93,19 +93,18 @@ a {
 
 .hero .description {
   flex: 1;
+  color: var(--white-theme);
 }
 
 .hero h1 {
   font-size: 4.8rem;
   line-height: 1;
-  color: var(--white-theme);
 }
 
 .hero p {
+  margin: 2rem 0 3.6rem;
   font-size: 2.2rem;
   line-height: 1.5;
-  color: var(--white-theme);
-  margin: 2rem 0 3.6rem;
 }
 
 .hero button {
@@ -186,7 +185,7 @@ a {
   color: var(--paragraph-theme);
   text-align: center;
   font-size: 1.8rem;
-  font-family: Roboto, Arial, sans-serif;;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 .quote {
@@ -231,6 +230,7 @@ a {
   height: 24rem;
   margin: 0 auto;
   background-image: linear-gradient(var(--light-blue-theme), var(--sub-theme));
+  color: var(--white-theme);
   border-radius: 1.2rem;
   display: flex;
   justify-content: space-around;
@@ -238,13 +238,11 @@ a {
 }
 
 .sign-up h3 {
-  color: var(--white-theme);
   font-size: 3.2rem;
   margin-bottom: 0.8rem;
 }
 
 .sign-up p {
-  color: var(--white-theme);
   font-size: 2rem;
 }
 
