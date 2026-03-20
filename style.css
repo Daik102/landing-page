@@ -290,25 +290,25 @@ html {
 /* For smartphones in portrait mode */
 @media screen and (orientation: portrait) {
   html {
-    font-size: 5.5px;
+    font-size: 6.5px;
   }
 }
 
 @media screen and (orientation: portrait) and (min-width: 20.01rem) {
   html {
-    font-size: 6.5px;
+    font-size: 7px;
   }
 }
 
 @media screen and (orientation: portrait) and (min-width: 24rem) and (min-height: calc(50rem - 6rem)) {
   html {
-    font-size: 7px;
+    font-size: 8px;
   }
 }
 
 @media screen and (orientation: portrait) and (min-width: 24rem) and (min-height: calc(56rem - 6rem)) {
   html {
-    font-size: 7.5px;
+    font-size: 8.5px;
   }
 }
 /* For tablets in portrait mode */
@@ -320,7 +320,7 @@ html {
 /* For smartphones in landscape mode */
 @media screen and (orientation: landscape) {
   html {
-    font-size: 5px;
+    font-size: 5.5px;
   }
 
   .header .inner,
@@ -370,7 +370,7 @@ html {
 
 @media screen and (orientation: landscape) and (min-width: 41rem) {
   html {
-    font-size: 6px;
+    font-size: 6.5px;
   }
 }
 
@@ -382,17 +382,11 @@ html {
 
 @media screen and (orientation: landscape) and (min-width: 53rem) {
   html {
-    font-size: 8px;
+    font-size: 8.5px;
   }
 }
-/* For Nest Hub and small tablets in landscape mode */
+/* For tablets in landscape mode and laptops */
 @media screen and (orientation: landscape) and (min-width: 64rem) {
-  html {
-    font-size: 9px;
-  }
-}
-/* For medium and large tablets in landscape mode and laptops */
-@media screen and (orientation: landscape) and (min-width: 72rem) {
   html {
     font-size: 10px;
   }
