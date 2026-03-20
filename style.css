@@ -9,46 +9,40 @@
 }
 
 :root {
-  --main-theme: rgb(31, 41, 55);
-  --sub-theme: rgb(23, 104, 224);
-  --white-theme: #f7f7ff;
+  --dark-blue-theme: rgb(31, 41, 55);
+  --blue-theme: rgb(23, 104, 224);
   --light-blue-theme: rgb(177, 210, 255);
-  --paragraph-theme: #777;
-  --hover-theme: rgb(105, 165, 255);
+  --button-hover-theme: rgb(38, 125, 255);
+  --white-theme: #f7f7ff;
+  --light-gray-theme: #d1d1d7;
+  --gray-theme: #777;
+  --shadow-theme: rgba(0, 0, 0, 0.2);
 }
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-size: 10px;
   font-family: Play-bold, Roboto, Arial, sans-serif;
 }
 
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
+html {
+  font-size: 10px;
 }
 
 .header {
-  background-color: var(--main-theme);
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 2rem;
+  background-color: var(--dark-blue-theme);
   border-bottom: 0.6rem dashed var(--light-blue-theme);
 }
 
 .header .inner {
-  max-width: 96rem;
-  height: 8rem;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header img {
-  cursor: pointer;
+  width: 44rem;
 }
 
 .logo {
@@ -60,186 +54,197 @@ a {
   cursor: pointer;
 }
 
-.logo img {
-  width: 4.8rem;
-  height: auto;
+.logo img,
+.header ul img {
   filter: invert(100%) sepia(39%) saturate(79%) hue-rotate(95deg) brightness(114%) contrast(95%);
+}
+
+.logo img {
+  width: 3.6rem;
 }
 
 .header ul {
   display: flex;
-  gap: 2.8rem;
+  gap: 2rem;
+  list-style-type: none;
 }
 
 .header ul img {
-  width: 3.6rem;
-  height: auto;
-  filter: invert(100%) sepia(39%) saturate(79%) hue-rotate(95deg) brightness(114%) contrast(95%);
+  width: 3.2rem;
+  cursor: pointer;
 }
 
 .hero {
-  background-color: var(--main-theme);
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
+  background-color: var(--dark-blue-theme);
 }
 
 .hero .inner {
-  max-width: 96rem;
-  margin: 0 auto;
   display: flex;
-  gap: 4.8rem;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  height: 44rem;
+  gap: 4rem;
+  width: 44rem;
 }
 
 .hero .description {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: var(--white-theme);
 }
 
 .hero h1 {
-  font-size: 4.8rem;
-  line-height: 1;
+  font-size: 3.6rem;
 }
 
 .hero p {
-  margin: 2rem 0 3.6rem;
+  margin: 2.4rem 0 3.6rem;
   font-size: 2.2rem;
   line-height: 1.5;
 }
 
 .hero button {
-  background-color: var(--sub-theme);
-  color: var(--white-theme);
-  border: none;
-  border-radius: 0.8rem;
   padding: 1.2rem 2.8rem;
-  font-size: 2rem;
   font-weight: 600;
+  font-size: 2rem;
+  color: var(--white-theme);
+  background-color: var(--blue-theme);
+  border: 0.2rem solid var(--white-theme);
+  border-radius: 0.8rem;
   cursor: pointer;
 }
 
 .hero button:hover {
-  background-color: var(--hover-theme);
+  background-color: var(--button-hover-theme);
 }
 
 .hero .img-container {
-  max-width: 48rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 2rem 0;
 }
 
 .hero .img-container img {
   width: 100%;
-  height: auto;
   object-fit: cover;
 }
 
 .info {
-  padding-top: 5.6rem;
-  height: 48rem;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
   background-color: var(--light-blue-theme);
-  border-bottom: 0.6rem dashed var(--main-theme);
+  border-bottom: 0.6rem dashed var(--dark-blue-theme);
+}
+
+.info .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 44rem;
 }
 
 .info h2 {
-  margin-bottom: 4rem;
-  font-size: 3.6rem;
   font-weight: 900;
-  color: var(--main-theme);
-  text-align: center;
+  margin-bottom: 5.2rem;
+  font-size: 3.2rem;
+  color: var(--dark-blue-theme);
 }
 
 .info ul {
-  display: flex;
-  justify-content: center;
-  gap: 5.2rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 6rem 4.8rem;
+  list-style-type: none;
 }
 
 .info li {
   width: 16rem;
-  height: 16rem;
 }
 
-.info div {
-  margin-bottom: 1.6rem;
+.info .inner div {
   width: 100%;
-  height: 100%;
-  border: 0.4rem solid var(--white-theme);
-  border-radius: 1.2rem;
+  height: 16rem;
+  margin-bottom: 2rem;
 }
 
-.info div img {
+.info .inner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 0.4rem solid var(--white-theme);
   border-radius: 1.2rem;
   cursor: pointer;
 }
 
-.info div img:hover {
-  opacity: 0.65;
-}
-
 .info p {
-  color: var(--paragraph-theme);
   text-align: center;
   font-size: 1.8rem;
   font-family: Roboto, Arial, sans-serif;
+  color: var(--gray-theme);
 }
 
 .quote {
-  background-color: #d1d1d7;
-  box-shadow: inset 0 -2rem 2rem 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
+  background-color: var(--light-gray-theme);
+  box-shadow: inset 0 -2rem 2rem var(--shadow-theme);
 }
 
 .quote .inner {
-  max-width: 78rem;
-  height: 44rem;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 1.2rem;
+  width: 44rem;
 }
 
 .quote p {
-  font-size: 3.6rem;
-  font-weight: 200;
   font-style: italic;
+  font-weight: 200;
+  font-size: 2.8rem;
+  line-height: 1.6;
   font-family: Roboto, Arial, sans-serif;
 }
 
-.quote .name {
+.quote .author {
   align-self: end;
-  margin-right: 2.2rem;
-  font-size: 2rem;
   font-weight: 700;
+  font-size: 2rem;
 }
 
 .sign-up {
-  background-color: var(--main-theme);
-  border-bottom: 0.6rem dashed var(--light-blue-theme);
   display: flex;
-  align-items: center;
-  height: 48rem;
+  justify-content: center;
+  padding: 8rem 0;
+  background-color: var(--dark-blue-theme);
+  border-bottom: 0.6rem dashed var(--light-blue-theme);
 }
 
 .sign-up .inner {
-  width: 96rem;
-  height: 24rem;
-  margin: 0 auto;
-  background-image: linear-gradient(var(--light-blue-theme), var(--sub-theme));
-  color: var(--white-theme);
-  border-radius: 1.2rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 44rem;
+  padding: 4rem;
+  color: var(--white-theme);
+  background-image: linear-gradient(var(--light-blue-theme), var(--blue-theme));
+  border-radius: 1.2rem;
+}
+
+.sign-up .description {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .sign-up h3 {
-  font-size: 3.2rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
 }
 
 .sign-up p {
@@ -247,32 +252,148 @@ a {
 }
 
 .sign-up button {
-  background-color: var(--sub-theme);
+  padding: 1.2rem 2.8rem;
+  font-weight: 600;
+  font-size: 2rem;
   color: var(--white-theme);
+  background-color: var(--blue-theme);
   border: 0.2rem solid var(--white-theme);
   border-radius: 0.8rem;
-  padding: 1.2rem 2.8rem;
-  font-size: 2rem;
-  font-weight: 600;
   cursor: pointer;
 }
 
 .sign-up button:hover {
-  background-color: var(--hover-theme);
+  background-color: var(--button-hover-theme);
 }
 
 .footer {
-  background-color: var(--main-theme);
-  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 4rem 0 6rem;
+  background-color: var(--dark-blue-theme);
 }
 
-.footer .inner {
-  max-width: 96rem;
-  height: 100%;
-  margin: 0 auto;
-  font-size: 1.6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer p,
+.footer a {
+  font-size: 1.8rem;
   color: var(--white-theme);
+}
+
+.footer a {
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+/* For smartphones in portrait mode */
+@media screen and (orientation: portrait) {
+  html {
+    font-size: 5.5px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 20.01rem) {
+  html {
+    font-size: 6.5px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 24rem) and (min-height: calc(50rem - 6rem)) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 24rem) and (min-height: calc(56rem - 6rem)) {
+  html {
+    font-size: 7.5px;
+  }
+}
+/* For tablets in portrait mode */
+@media screen and (orientation: portrait) and (min-width: 48rem) {
+  html {
+    font-size: 10px;
+  }
+}
+/* For smartphones in landscape mode */
+@media screen and (orientation: landscape) {
+  html {
+    font-size: 5px;
+  }
+
+  .header .inner,
+  .hero .inner,
+  .info .inner,
+  .quote .inner {
+    width: 96rem;
+  }
+
+  .header .inner {
+    justify-content: space-between;
+  }
+
+  .hero .inner {
+    flex-direction: row;
+  }
+
+  .hero .description {
+    align-items: flex-start;
+    flex: 1;
+  }
+
+  .hero .img-container {
+    flex: 1;
+  }
+
+  .hero button {
+    align-self: center;
+  }
+
+  .info ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sign-up .inner {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 86rem;
+    padding: 6rem 4rem;
+  }
+
+  .sign-up button {
+    width: 14rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 41rem) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 47rem) {
+  html {
+    font-size: 7.5px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 53rem) {
+  html {
+    font-size: 8px;
+  }
+}
+/* For Nest Hub and small tablets in landscape mode */
+@media screen and (orientation: landscape) and (min-width: 64rem) {
+  html {
+    font-size: 9px;
+  }
+}
+/* For medium and large tablets in landscape mode and laptops */
+@media screen and (orientation: landscape) and (min-width: 72rem) {
+  html {
+    font-size: 10px;
+  }
 }
