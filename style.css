@@ -9,10 +9,10 @@
 }
 
 :root {
-  --dark-blue-theme: rgb(31, 41, 55);
-  --blue-theme: rgb(23, 104, 224);
-  --light-blue-theme: rgb(177, 210, 255);
-  --button-hover-theme: rgb(38, 125, 255);
+  --dark-blue-theme: #1f2937;
+  --blue-theme: #1768e0;
+  --light-blue-theme: #b1d2ff;
+  --button-hover-theme: #267dff;
   --white-theme: #f7f7ff;
   --light-gray-theme: #d1d1d7;
   --gray-theme: #777;
@@ -54,22 +54,22 @@ html {
   cursor: pointer;
 }
 
-.logo img,
-.header ul img {
+.logo .icon,
+.header-link-items .icon {
   filter: invert(100%) sepia(39%) saturate(79%) hue-rotate(95deg) brightness(114%) contrast(95%);
 }
 
-.logo img {
+.logo .icon {
   width: 3.6rem;
 }
 
-.header ul {
+.header-link-items {
   display: flex;
   gap: 2rem;
   list-style-type: none;
 }
 
-.header ul img {
+.header-link-items .icon {
   width: 3.2rem;
   cursor: pointer;
 }
@@ -85,28 +85,29 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   width: 44rem;
 }
 
-.hero .description {
+.hero-description-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   color: var(--white-theme);
 }
 
-.hero h1 {
-  font-size: 3.6rem;
+.hero-title {
+  font-size: 3.4rem;
 }
 
-.hero p {
+.hero-description-container .description {
   margin: 2.4rem 0 3.6rem;
   font-size: 2.2rem;
   line-height: 1.5;
 }
 
-.hero button {
+.hero .sign-up-btn {
+  align-self: center;
   padding: 1.2rem 2.8rem;
   font-weight: 600;
   font-size: 2rem;
@@ -117,15 +118,15 @@ html {
   cursor: pointer;
 }
 
-.hero button:hover {
+.hero .sign-up-btn:hover {
   background-color: var(--button-hover-theme);
 }
 
-.hero .img-container {
+.hero-img-container {
   padding: 2rem 0;
 }
 
-.hero .img-container img {
+.hero-img-container .photo {
   width: 100%;
   object-fit: cover;
 }
@@ -145,14 +146,14 @@ html {
   width: 44rem;
 }
 
-.info h2 {
+.info-title {
   font-weight: 900;
   margin-bottom: 5.2rem;
   font-size: 3.2rem;
   color: var(--dark-blue-theme);
 }
 
-.info ul {
+.info-list-items {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -160,17 +161,17 @@ html {
   list-style-type: none;
 }
 
-.info li {
+.info-list-items li {
   width: 16rem;
 }
 
-.info .inner div {
+.info-list-items figure {
   width: 100%;
   height: 16rem;
   margin-bottom: 2rem;
 }
 
-.info .inner img {
+.info-list-items .photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -179,7 +180,7 @@ html {
   cursor: pointer;
 }
 
-.info p {
+.info-list-items .description {
   text-align: center;
   font-size: 1.8rem;
   font-family: Roboto, Arial, sans-serif;
@@ -202,10 +203,10 @@ html {
   width: 44rem;
 }
 
-.quote p {
+.quote .description {
   font-style: italic;
   font-weight: 200;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   line-height: 1.6;
   font-family: Roboto, Arial, sans-serif;
 }
@@ -213,7 +214,7 @@ html {
 .quote .author {
   align-self: end;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .sign-up {
@@ -229,29 +230,27 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 4rem;
-  width: 44rem;
-  padding: 4rem;
+  width: 40rem;
+  padding: 4rem 2rem;
   color: var(--white-theme);
   background-image: linear-gradient(var(--light-blue-theme), var(--blue-theme));
   border-radius: 1.2rem;
 }
 
-.sign-up .description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.sign-up-description-container {
+  text-align: center;
 }
 
-.sign-up h3 {
+.sign-up-title {
   margin-bottom: 2rem;
   font-size: 3rem;
 }
 
-.sign-up p {
+.sign-up-description-container .description {
   font-size: 2rem;
 }
 
-.sign-up button {
+.sign-up .sign-up-btn {
   padding: 1.2rem 2.8rem;
   font-weight: 600;
   font-size: 2rem;
@@ -262,7 +261,7 @@ html {
   cursor: pointer;
 }
 
-.sign-up button:hover {
+.sign-up .sign-up-btn:hover {
   background-color: var(--button-hover-theme);
 }
 
@@ -275,16 +274,16 @@ html {
   background-color: var(--dark-blue-theme);
 }
 
-.footer p,
-.footer a {
+.footer .description,
+.footer .link {
   font-size: 1.8rem;
   color: var(--white-theme);
 }
 
-.footer a {
+.footer .link {
   text-decoration: none;
 }
-.footer a:hover {
+.footer .link:hover {
   text-decoration: underline;
 }
 /* For smartphones in portrait mode */
@@ -294,40 +293,57 @@ html {
   }
 }
 
-@media screen and (orientation: portrait) and (min-width: 20.01rem) {
+@media screen and (orientation: portrait) and (min-width: 22.5em) {
   html {
-    font-size: 7px;
+    font-size: 7.5px;
   }
 }
 
-@media screen and (orientation: portrait) and (min-width: 24rem) and (min-height: calc(50rem - 6rem)) {
+@media screen and (orientation: portrait) and (min-width: 23.4em) {
+  html {
+    font-size: 7.75px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 24.3em) {
   html {
     font-size: 8px;
   }
 }
 
-@media screen and (orientation: portrait) and (min-width: 24rem) and (min-height: calc(56rem - 6rem)) {
+@media screen and (orientation: portrait) and (min-width: 25.75em) {
+  html {
+    font-size: 8.25px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 26.75em) {
   html {
     font-size: 8.5px;
   }
 }
 /* For tablets in portrait mode */
-@media screen and (orientation: portrait) and (min-width: 48rem) {
+@media screen and (orientation: portrait) and (min-width: 48em) {
   html {
     font-size: 10px;
+  }
+
+  .sign-up .inner {
+    width: 48rem;
+    padding: 4rem 6rem;
   }
 }
 /* For smartphones in landscape mode */
 @media screen and (orientation: landscape) {
   html {
-    font-size: 5.5px;
+    font-size: 6.5px;
   }
 
   .header .inner,
   .hero .inner,
   .info .inner,
   .quote .inner {
-    width: 96rem;
+    width: 84rem;
   }
 
   .header .inner {
@@ -338,20 +354,17 @@ html {
     flex-direction: row;
   }
 
-  .hero .description {
-    align-items: flex-start;
-    flex: 1;
+  .hero-title,
+  .hero-description-container .description
+   {
+    width: 44rem;
   }
 
-  .hero .img-container {
-    flex: 1;
+  .hero-img-container {
+    width: 38rem;
   }
 
-  .hero button {
-    align-self: center;
-  }
-
-  .info ul {
+  .info-list-items {
     display: flex;
     justify-content: center;
   }
@@ -359,34 +372,46 @@ html {
   .sign-up .inner {
     flex-direction: row;
     justify-content: space-between;
-    width: 86rem;
-    padding: 6rem 4rem;
+    width: 64rem;
+    padding: 6rem;
   }
 
-  .sign-up button {
-    width: 14rem;
-  }
-}
-
-@media screen and (orientation: landscape) and (min-width: 41rem) {
-  html {
-    font-size: 6.5px;
+  .sign-up .sign-up-btn {
+    width: 18rem;
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 47rem) {
+@media screen and (orientation: landscape) and (min-width: 41.6em) {
   html {
     font-size: 7.5px;
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 53rem) {
+@media screen and (orientation: landscape) and (min-width: 46.25em) {
+  html {
+    font-size: 7.75px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 50em) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 55.75em) {
+  html {
+    font-size: 8.25px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 58em) {
   html {
     font-size: 8.5px;
   }
 }
-/* For tablets in landscape mode and laptops */
-@media screen and (orientation: landscape) and (min-width: 64rem) {
+/* For tablets in landscape mode, laptops and desktops */
+@media screen and (orientation: landscape) and (min-width: 64em) {
   html {
     font-size: 10px;
   }
