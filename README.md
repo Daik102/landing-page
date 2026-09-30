@@ -1,7 +1,7 @@
 <h1>Project: Landing Page</h1>
 
 A landing page that has several sections.<br>
-This project is based on <a href="https://www.theodinproject.com/" target="_blank" rel="noreferrer">The Odin Project</a>.
+This project is based on <a href="https://www.theodinproject.com/">The Odin Project</a>.
 
 <h3>Features</h3>
 
@@ -13,4 +13,6 @@ This project is based on <a href="https://www.theodinproject.com/" target="_blan
 
 <h3>Tech Stack</h3>
 
-- HTML CSS
+- Frontend: HTML CSS
+
+- Icons: <a href="https://pictogrammers.com/">Pictogrammers</a>
