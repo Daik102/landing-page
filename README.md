@@ -1,4 +1,4 @@
-<h2>Project: Landing Page</h2>
+<h1>Project: Landing Page</h1>
 
 A landing page that has several sections.<br>
 This project is based on <a href="https://www.theodinproject.com/" target="_blank" rel="noreferrer">The Odin Project</a>.
