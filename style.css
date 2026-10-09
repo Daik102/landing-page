@@ -8,6 +8,12 @@
   src: url(./font/Roboto-VariableFont_wdth\,wght.woff2) format('woff2');
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --dark-blue-theme: #1f2937;
   --blue-theme: #1768e0;
@@ -21,15 +27,13 @@
   --description-font: Roboto, Arial, sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  font-size: 50%;
   font-family: var(--main-font);
 }
 
-html {
-  font-size: 50%;
+button {
+  font-family: inherit;
 }
 
 .header {
